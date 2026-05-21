@@ -3,6 +3,7 @@ package com._zden.BloggingApp.Service;
 
 import com._zden.BloggingApp.Entities.Blog;
 import com._zden.BloggingApp.Repo.BlogRepo;
+import com._zden.BloggingApp.blogDTO.BlogResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,8 +21,9 @@ public class BlogService {
     }
 
     // Get Blog By id
-    public Blog getBlog(int id){
-        return repo.findById(id).orElse(null);
+    public BlogResponseDTO getBlog(int id){
+//        return (BlogResponseDTO) repo.findById(id);
+        return null;
     }
 
     // Post Blog
