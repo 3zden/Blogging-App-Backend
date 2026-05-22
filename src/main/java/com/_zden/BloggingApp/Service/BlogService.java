@@ -32,7 +32,7 @@ public class BlogService {
 
     // Post Blog
     public void postBlog(createBlogDto blog){
-        repo.save(new Blog(blog.title(), blog.content(), blog.content()));
+        repo.save(new Blog(blog.title(), blog.content(), blog.author()));
     }
     // update a blog
     public void updateBlog(Blog blog, int id) {
