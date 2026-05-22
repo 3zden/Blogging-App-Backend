@@ -4,6 +4,7 @@ package com._zden.BloggingApp.Controller;
 import com._zden.BloggingApp.Entities.Blog;
 import com._zden.BloggingApp.Service.BlogService;
 import com._zden.BloggingApp.blogDTO.Blogresponse;
+import com._zden.BloggingApp.blogDTO.createBlogDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -25,13 +26,13 @@ public class BlogController {
     }
 
     @PostMapping("/v1/blogs")
-    public void postBlog(@RequestBody Blog blog){
+    public void postBlog(@RequestBody createBlogDto blog){
         service.postBlog(blog);
     }
 
-    @PutMapping("/v1/blogs")
-    public void updateBlog(@RequestBody Blog blog){
-        service.updateBlog(blog);
+    @PutMapping("/v1/blogs/{id}")
+    public void updateBlog(@PathVariable int id,@RequestBody Blog blog){
+        service.updateBlog(blog,id);
     }
 
     @DeleteMapping("/v1/blogs/{id}")

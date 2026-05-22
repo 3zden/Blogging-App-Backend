@@ -2,9 +2,10 @@ package com._zden.BloggingApp.Service;
 
 
 import com._zden.BloggingApp.Entities.Blog;
-import com._zden.BloggingApp.Mapper.userMapper;
+import com._zden.BloggingApp.Mapper.BlogMapper;
 import com._zden.BloggingApp.Repo.BlogRepo;
 import com._zden.BloggingApp.blogDTO.Blogresponse;
+import com._zden.BloggingApp.blogDTO.createBlogDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.List;
 public class BlogService {
     @Autowired
     BlogRepo repo;
-    userMapper mapper  = new userMapper();
+    BlogMapper mapper  = new BlogMapper();
 
     // Get all blogs
     public List<Blogresponse> getBlogs(){
@@ -30,11 +31,11 @@ public class BlogService {
     }
 
     // Post Blog
-    public void postBlog(Blog blog){
-        repo.save(blog);
+    public void postBlog(createBlogDto blog){
+        repo.save(new Blog(blog.title(), blog.content(), blog.content()));
     }
     // update a blog
-    public void updateBlog(Blog blog) {
+    public void updateBlog(Blog blog, int id) {
         repo.save(blog);
     }
 
