@@ -2,11 +2,11 @@ package com._zden.BloggingApp.blogDTO;
 
 
 
-public record Blogresponse(
+public record BlogResponseDTO(
         int id,
         String title,
         String content,
-        String author,
-        int likes
+        String authorFirstName,
+        String authorLastName
 ) {
 }

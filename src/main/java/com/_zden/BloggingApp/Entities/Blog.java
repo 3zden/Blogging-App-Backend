@@ -23,11 +23,11 @@ public class Blog {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private int likes;
-    private String author;
+    private long authorId;
 
     //Constructor
-    public Blog(String title,String content, String author){
-        this.author = author;
+    public Blog(String title,String content, long authorId){
+        this.authorId = authorId;
         this.title = title;
         this.content = content;
         this.createdAt = LocalDateTime.now();
