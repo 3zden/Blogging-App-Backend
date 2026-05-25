@@ -1,9 +1,6 @@
 package com._zden.BloggingApp.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +11,7 @@ import java.util.UUID;
 @Data
 @Entity
 @Getter @Setter
+@Table(name = "blogs")
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
