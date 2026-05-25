@@ -33,5 +33,7 @@ public class UserEntity {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
     }
 }
