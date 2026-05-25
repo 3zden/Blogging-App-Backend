@@ -18,9 +18,12 @@ public class Blog {
     private int id;
     private String title;
     private String content;
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
     private int likes;
+    @Column(name = "author_id")
     private long authorId;
 
     //Constructor
