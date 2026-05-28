@@ -1,11 +1,10 @@
 package com._zden.BloggingApp.Controller;
 
 
-import com._zden.BloggingApp.Entities.Blog;
 import com._zden.BloggingApp.Service.BlogService;
-import com._zden.BloggingApp.blogDTO.BlogResponseDTO;
-import com._zden.BloggingApp.blogDTO.CreateBlogDTO;
-import com._zden.BloggingApp.blogDTO.UpdateBlogDTO;
+import com._zden.BloggingApp.DTOs.BlogResponseDTO;
+import com._zden.BloggingApp.DTOs.CreateBlogDTO;
+import com._zden.BloggingApp.DTOs.UpdateBlogDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

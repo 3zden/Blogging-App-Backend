@@ -1,8 +1,7 @@
 package com._zden.BloggingApp.Service;
 
 import com._zden.BloggingApp.Entities.UserEntity;
-import com._zden.BloggingApp.Repo.UserRepo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com._zden.BloggingApp.Repositories.UserRepo;
 import org.springframework.stereotype.Service;
 
 @Service

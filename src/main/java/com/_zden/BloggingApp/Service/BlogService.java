@@ -4,17 +4,16 @@ package com._zden.BloggingApp.Service;
 import com._zden.BloggingApp.Entities.Blog;
 import com._zden.BloggingApp.Entities.UserEntity;
 import com._zden.BloggingApp.Mapper.BlogMapper;
-import com._zden.BloggingApp.Repo.BlogRepo;
-import com._zden.BloggingApp.Repo.UserRepo;
-import com._zden.BloggingApp.blogDTO.BlogResponseDTO;
-import com._zden.BloggingApp.blogDTO.CreateBlogDTO;
-import com._zden.BloggingApp.blogDTO.UpdateBlogDTO;
+import com._zden.BloggingApp.Repositories.BlogRepo;
+import com._zden.BloggingApp.Repositories.UserRepo;
+import com._zden.BloggingApp.DTOs.BlogResponseDTO;
+import com._zden.BloggingApp.DTOs.CreateBlogDTO;
+import com._zden.BloggingApp.DTOs.UpdateBlogDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class BlogService {

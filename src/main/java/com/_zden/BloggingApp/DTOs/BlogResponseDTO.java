@@ -1,4 +1,4 @@
-package com._zden.BloggingApp.blogDTO;
+package com._zden.BloggingApp.DTOs;
 
 
 
