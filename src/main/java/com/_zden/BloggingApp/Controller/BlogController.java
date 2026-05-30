@@ -31,7 +31,7 @@ public class BlogController {
     @PostMapping("/v1/blogs")
     public ResponseEntity<BlogResponseDTO> postBlog(@Valid @RequestBody CreateBlogDTO blog){
         service.postBlog(blog);
-        return ResponseEntity.status(HttpStatus.CREATED).body(null);
+        return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 
     @PutMapping("/v1/blogs/{id}")

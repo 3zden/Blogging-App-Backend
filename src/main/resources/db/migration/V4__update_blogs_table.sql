@@ -1,0 +1,1 @@
+ALTER TABLE blogs RENAME COLUMN author_id to user_id;

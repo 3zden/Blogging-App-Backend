@@ -23,14 +23,15 @@ public class Blog {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
     private int likes;
-    @Column(name = "author_id")
-    private long authorId;
+    @ManyToOne()
+    @JoinColumn(name = "user_id")
+    private User author;
 
     //Constructor
-    public Blog(String title,String content, long authorId){
-        this.authorId = authorId;
+    public Blog(String title,String content,User author){
         this.title = title;
         this.content = content;
+        this.author = author;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
         this.likes = 0;
