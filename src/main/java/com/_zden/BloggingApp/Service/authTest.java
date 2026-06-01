@@ -14,7 +14,7 @@ public class authTest{
             sb.append(String.format("%02x", b));
         }
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
         return sb.toString();
     }
     public authTest(){}
